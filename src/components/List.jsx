@@ -1,7 +1,8 @@
-import { memo } from "react";
+import { memo } from 'react';
 
-const List = ({ items }) => {
+const List = memo(({ items }) => {
   console.log("List component rendered");
+
   return (
     <ul>
       {items.map((item, index) => (
@@ -9,6 +10,6 @@ const List = ({ items }) => {
       ))}
     </ul>
   );
-};
+});
 
-export default memo(List);
+export default List;
